@@ -31,6 +31,33 @@
     
     
     <entry>
+      <title>这是标题</title>
+      <link href="2021/05/08/test1/"/>
+      <url>2021/05/08/test1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="书写演示"><a href="#书写演示" class="headerlink" title="书写演示"></a>书写演示</h1><h3 id="钱老板NB"><a href="#钱老板NB" class="headerlink" title="钱老板NB"></a>钱老板NB</h3><p><strong>钱老板赛高</strong></p><blockquote><p>钱老板改变了…</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 这是分类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> test </tag>
+            
+            <tag> demo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MarkDown博客的基本用法</title>
       <link href="2021/05/08/%E7%94%A8%E6%B3%95/"/>
       <url>2021/05/08/%E7%94%A8%E6%B3%95/</url>
