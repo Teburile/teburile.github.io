@@ -9,26 +9,28 @@
 
 也可以不使用命令自己创建 .md 文件，只需在文件开头手动加入如下格式 Front-matter 即可，写完后运行 hexo g 和 hexo d 发布。
 1234567891011121314151617---title: Hello Wo..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2021/05/08/%E7%94%A8%E6%B3%95/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/OOP"><i class="tag post-item-tag">OOP</i></a><a href="/tags/%E7%AC%94%E8%AE%B0"><i class="tag post-item-tag">笔记</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2021/05/08/note/">OOP某节课的笔记</a></h2><time class="has-text-grey" datetime="2021-05-07T16:00:00.000Z">2021-05-08</time><p class="is-flex-grow-2 mt-2">模板与STL初步类模板：使用参数类型  用类型T来定义模板类
-123template &amp;lt;typename T&amp;gt; class A&amp;#123;	T a;&amp;#125;
-
-
+template &amp;lt;typename T&amp;gt; class A&amp;#123;
+    T a;
+&amp;#125;
 
 命名空间防止名称冲突，引入namespace 关键字
-1234namespace A&amp;#123;	int x;	int y;&amp;#125;
+namespace A&amp;#123;
+    int x;
+    int y;
+&amp;#125;
 
 在使用时
-1using namespace A;
+using namespace A;
 
 或者是
-1using namespace A::x;
+using namespace A::x;
 
 STL库STL：Standard Template Library
 包含四个组件：算法，容器，函数，迭代器
 STL的命名空间是std
 一般使用using namespace std::名称
 大型工程当中不推荐引入整个命名空间
-STL容器容器是包含、放置数据的工具，通常为数据结构，包括：
-..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2021/05/08/note/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/2333"><i class="tag post-item-tag">2333</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2021/05/07/my-new-post/">my_new_post</a></h2><time class="has-text-grey" datetime="2021-05-07T13:18:50.000Z">2021-05-07</time><p class="is-flex-grow-2 mt-2">233333
+STL容器容器是包含、放置数据的工具，通常为数据结构，包..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2021/05/08/note/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/2333"><i class="tag post-item-tag">2333</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2021/05/07/my-new-post/">my_new_post</a></h2><time class="has-text-grey" datetime="2021-05-07T13:18:50.000Z">2021-05-07</time><p class="is-flex-grow-2 mt-2">233333
 </p><a class="button is-default mt-2 has-text-weight-semibold" href="/2021/05/07/my-new-post/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2021/05/07/hello-world/">Hello World</a></h2><time class="has-text-grey" datetime="2021-05-07T12:33:25.202Z">2021-05-07</time><p class="is-flex-grow-2 mt-2">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
 Quick StartCreate a new post1$ hexo new &amp;quot;My New Post&amp;quot;
 
