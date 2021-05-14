@@ -61,7 +61,7 @@ auto t = std::make_pair(&quot;abc&quot;,7);
 </code></pre>
 <p>pair 支持小于、等于、大于比较运算符</p>
 <p>先比较第一个元素，再比较第二个元素，要求元素类型支持比较运算符</p>
-<h4 id="tuple-容器"><a href="#tuple-容器" class="headerlink" title="tuple 容器"></a>tuple 容器</h4><p>tuple 是多个元素的pair，要求再使用时就确定内部由多少个元素</p>
+<h4 id="tuple-容器"><a href="#tuple-容器" class="headerlink" title="tuple 容器"></a>tuple 容器</h4><p>tuple 是多个元素的pair，要求在使用时就确定内部由多少个元素</p>
 <pre><code class="c++">template&lt;class T1,class T2,class T3&gt; class tuple&#123;
     T1 a;
     T2 b;
