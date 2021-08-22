@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>SQL初探</title>
+      <link href="2021/08/22/SQL/"/>
+      <url>2021/08/22/SQL/</url>
+      
+        <content type="html"><![CDATA[<h3 id="SQLite"><a href="#SQLite" class="headerlink" title="SQLite"></a>SQLite</h3><p>合适位置建立数据库，在命令行操作</p><pre><code class="shell">sqlite3 db.sqlite3  #建立或加载数据库 CURD为增删查改四种基本操作，进入数据库需要先载入数据库#查select * from student; #需要分号 从表中查找select id, name from student where sex=&#39;男&#39; and age &lt;= 22;  #精细查找名称、学号#增insert into student values (123, &quot;test1&quot;, &quot;男&quot;,22,&#39;毕业生&#39;); #不区分单双引号insert into student (id,name,age) values (233,&quot;&quot;,23),(345,&quot;?&quot;,33); #插入特定信息，未定义使用默认值，未显式定义默认值则为NULL</code></pre><p>删除</p><pre><code class="shell">delete from student where age =18; #查询不到对应条件也无回应</code></pre><p>更新</p><pre><code class="shell">update student set age = 30 where id = 123;update student set age=age+1 where id =123;</code></pre><p>创建表</p><pre><code>create table teacher(    id int primary key not NULL,    name varchar(32),    sex varchar(2),    age int,    status varchar(8));</code></pre><p>​    其他</p><pre><code class="shell">.help #帮助.quit #退出.tables #列出所有表名.schema &lt;table_name&gt; #查看表的schema信息</code></pre><p>SQLite不具备很好的并发性，不能在高并发的网站中使用，不能同时做许多操作</p><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><p>搭建非静态网站，一般MySQL 或 MariaDB是首选 使用Docker来降低配置环境的成本。</p><h3 id="python交互SQLite"><a href="#python交互SQLite" class="headerlink" title="python交互SQLite"></a>python交互SQLite</h3><pre><code class="python">#TO DO</code></pre><h3 id="Django"><a href="#Django" class="headerlink" title="Django"></a>Django</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> note </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> note </tag>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>OOP期末复习</title>
       <link href="2021/06/11/OOP%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
       <url>2021/06/11/OOP%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</url>
