@@ -39,6 +39,37 @@ update student set age=age+1 where id =123;
 </code></pre>
 <p>SQLite不具备很好的并发性，不能在高并发的网站中使用，不能同时做许多操作</p>
 <h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><p>搭建非静态网站，一般MySQL 或 MariaDB是首选 使用Docker来降低配置环境的成本。</p>
-<h3 id="python交互SQLite"><a href="#python交互SQLite" class="headerlink" title="python交互SQLite"></a>python交互SQLite</h3><pre><code class="python">#TO DO
+<h3 id="python交互SQLite"><a href="#python交互SQLite" class="headerlink" title="python交互SQLite"></a>python交互SQLite</h3><pre><code class="python">DATABASE_URL = &quot;sqlite:///./Data.db&quot; #数据库存放的地址
+engine=create_engine(DATABASE_URL) #引擎连接数据库
+DBSession=sessionmaker(bind=engine) #依据引擎创造会话
+Base=declarative_base() #数据库的Base类
+
+#以下为创建表单
+class Worker(Base):
+    __tablename__=&#39;worker&#39; #表的名称，单双引号不分
+    id=Column(Integer,primary_key=True) #创建关键字段为id 类型为int
+    record=relationship(&#39;Record&#39;,back_populates=&quot;worker&quot;)#创建外键，以一对多连接记录,worker为record记录里的worker
+    
+class Record(Base):
+    __tablename__=&#39;record&#39; 
+    id=Column(Integer,primary_key=True,autoincrement=True,nullable=False) #设置id自动增加，每条新纪录+1
+    worker=relationship(&quot;Worker&quot;,back_populates=&quot;record&quot;)
+    worker_id=Column(Integer,ForeignKey(&quot;Work.id&quot;))#绑定多方外键、使用类名
+    time=Column(Integer)
+
+Base.metadata.create_all(bind=engine) #在数据库中创建上述没有的表单
+
+new_worker=Worker(
+    id=2,
+)
+new_record=Record(
+    time=1,
+)
+db=DBSession() #创建一个会话
+db.add(new_worker) #添加工人
+db.add(new_record) #添加记录
+new_record.worker=new_worker #绑定工人和记录
+db.commit() #提交操作
+db.close() #关闭会话
 </code></pre>
 <h3 id="Django"><a href="#Django" class="headerlink" title="Django"></a>Django</h3></article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><em></em><a class="button is-default" href="/2021/06/11/OOP%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="OOP期末复习"><span class="has-text-weight-semibold">下一页: OOP期末复习</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Teburile/blog-comments" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com//"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/Teburile"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com//"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com//"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright © </span><span> Teburile 2021</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/post.js"></script></body></html>
