@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>CSS Introduction(2)</title>
+      <link href="2021/08/24/cssnote(2)/"/>
+      <url>2021/08/24/cssnote(2)/</url>
+      
+        <content type="html"><![CDATA[<h2 id="CSS入门"><a href="#CSS入门" class="headerlink" title="CSS入门"></a>CSS入门</h2><h3 id="使用display控制布局"><a href="#使用display控制布局" class="headerlink" title="使用display控制布局"></a>使用display控制布局</h3><p>元素为块级元素以及行内元素，块级元素会占据尽可能多的宽度，而行内元素只占据必要的宽度。每一个元素有一个默认的display值，可以被样式的display值覆盖。</p><pre><code class="css">a &#123;    display:none;/*隐藏元素且不产生对应的空白 */&#125;</code></pre><h3 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h3><p>position属性</p><p>设置位置：恒定在某个角落、滚动时移动但是会黏在上边界、静止不动</p><p>元素发生重叠时，用z-index指定图层的顺序</p><h3 id="元素溢出"><a href="#元素溢出" class="headerlink" title="元素溢出"></a>元素溢出</h3><p>文本超出长度，可以选择裁剪文本还是添加滚动条</p><h3 id="浮动和清除"><a href="#浮动和清除" class="headerlink" title="浮动和清除"></a>浮动和清除</h3><p>通过float来实现浮动，即类似于文字包围图片的效果。</p><p>有左、右、不、继承四个选项，设置在图片上。</p><p>通过clear可以实现不浮动，设置哪一侧可以有文字的浮动，设置在文字上。</p><h3 id="CSS布局"><a href="#CSS布局" class="headerlink" title="CSS布局"></a>CSS布局</h3><p>可以通过flex来实现</p><p>需要将元素的display指定为flex，该元素称为容器。</p><p>设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。</p><p>容器有六个元素</p><ul><li>flex-direction 主轴方向</li><li>flex-wrap 项目排不下时是否换行</li><li>flex-flow 前两个的简写属性</li><li>justify-content 项目在主轴上的对齐方式</li><li>align-items 项目在交叉轴上的对齐方式</li><li>align-content 只有具有多根轴线的时候才起作用</li></ul><p>项目的属性</p><ul><li><code>order</code> 排列顺序、数字越小越靠前</li><li><code>flex-grow</code> 项目的放大比例</li><li><code>flex-shrink </code>项目的缩小比例</li><li><code>flex-basis </code>项目的原本大小</li><li><code>flex</code> 第二到第四个的简写</li><li><code>align-self </code>设置与其他元素不同的对齐方式，只对交叉轴有效</li></ul><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">Flex 布局教程：语法篇 - 阮一峰的网络日志 (ruanyifeng.com)</a></p><p><a href="https://www.w3school.com.cn/css/index.asp">CSS 教程 (w3school.com.cn)</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> note </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> note </tag>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS Introduction</title>
+      <link href="2021/08/24/cssnote/"/>
+      <url>2021/08/24/cssnote/</url>
+      
+        <content type="html"><![CDATA[<h2 id="CSS初探"><a href="#CSS初探" class="headerlink" title="CSS初探"></a>CSS初探</h2><p>CSS一般书写在HTML的头内 由&lt;style&gt;&lt;/style&gt;包括</p><p>CSS规则集：</p><pre><code class="css">h1 &#123;color:red;font-size:14px;&#125; /*h1 为选择器，指向对应元素，后面为声明块，一个属性和一个值 */</code></pre><h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><p>选择器用于查找需要设置样式的HTML元素</p><p>分为五类：</p><ul><li>简单选择器 选择名称 id 类</li><li>组合器选择器 依据相互之间的关系（例如&lt;p&gt;下面的&lt;ul&gt;）</li><li>伪类选择器 依据特定状态选择</li><li>伪元素选择器 选择元素的一部分并设置样式</li><li>属性选择器 依据属性值或属性选择</li></ul><pre><code class="css">p &#123;    text-align:center;    color:red;&#125;/*元素选择器，含&lt;p&gt;标签的都收到影响*/#para1 &#123;    text-align:center;    color:red;&#125;/*id选择器 id必须唯一 且不能以数字开头 需要写#来标识是id选择器*/.crea &#123;    font-size: 15px;    color: blue;&#125;/*类选择器 需要加.来标识是类选择器*，类名不能以数字开头*/p.crea&#123;    font-size: 15px;    color: blue;&#125;/*复合选择器 可以选择两个条件的交集 HTML的元素可以引用多个类 实现多个类的效果*/* &#123;     font-size: 15px;/*15与像素单位之间不能有空格*/    color: blue;&#125;/*通用选择器 使用通配符来设置全体元素的样式*/h1,h2,p,.crea,para1&#123;     font-size: 15px;    color: blue;&#125;/*分组选择器 可以把多个组合并，可以合并类与id*//*以上代码为较简单的选择器*/</code></pre><h3 id="在HTML中添加CSS"><a href="#在HTML中添加CSS" class="headerlink" title="在HTML中添加CSS"></a>在HTML中添加CSS</h3><p>三种方法：</p><ul><li><p>外部</p><p>以外部文件形式存在，需在HTML文件内head内添加link</p><pre><code class="html">&lt;head&gt;    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;src/css/headstyle.css&quot;&gt;    &lt;!-- rel为关系参数 有几个特定值  type由自己定义 描述类型 herf为资源的位置--&gt;&lt;/head&gt;</code></pre><p>其中src/css/headstyle.css应类似于如下（不包含任何html标签）</p><pre><code class="css">h1&#123;    font-size:15px;    color:blue;&#125;p&#123;    text-align:center;&#125;</code></pre></li><li><p>内部</p><p>即在head元素的style元素内定义</p></li><li><p>行内</p><p>直接在元素的标签内添加style属性</p><pre><code class="html">&lt;p style=&quot;color:blue;font-size:15px;&quot;&gt;233&lt;/p&gt;</code></pre></li></ul><p>多个样式表冲突时，使用最后定义的样式表</p><h3 id="CSS颜色"><a href="#CSS颜色" class="headerlink" title="CSS颜色"></a>CSS颜色</h3><p>背景色：background-color</p><p>文本色：color</p><p>边框色：border:2px solid blue;</p><p>可以使用rgb rgba 指定颜色，使用三个十进制数字或者是HEX值（三个16进制数，且以#开头）均可，a是不透明度</p><p>可以使用HSL值指定，为色轮上的着色</p><p>H:色相 0到360度 为不同颜色</p><p>S:饱和度 颜色的强度</p><p>L:亮度</p><p>HSL可扩展为hsla</p><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><ul><li>background-color 背景颜色</li><li>background-image 背景图像</li><li>background-repeat 背景重复</li><li>background-attachment 背景的滚动与否</li><li>background-position 背景图像的开始位置</li></ul><h3 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h3><p>可以设置圆角 宽度 样式 颜色等</p><h3 id="外边距"><a href="#外边距" class="headerlink" title="外边距"></a>外边距</h3><p>可以设置元素与周围其他元素的距离</p><p>可以利用百分比、绝对像素、自动、继承父元素等设置</p><p>外边距在某些情况下会自动发送合并</p><p>允许负值</p><h3 id="内边距"><a href="#内边距" class="headerlink" title="内边距"></a>内边距</h3><p>会距边距大小自动调节边框大小</p><p>不允许负值</p><h3 id="宽度、高度"><a href="#宽度、高度" class="headerlink" title="宽度、高度"></a>宽度、高度</h3><p>设置的是包含外边距的区域宽度、高度</p><h3 id="框模型"><a href="#框模型" class="headerlink" title="框模型"></a>框模型</h3><p>即可以将内容包括在其中的一个框</p><pre><code class="css">div&#123;    width:200px;    padding:10px;    border:5px solid gray;    margin:0;    outline-style:dotted;/*轮廓、此处为点状轮廓*/&#125; /*盒元素*/</code></pre><p>轮廓有宽度、颜色、简写轮廓、轮廓偏移</p><h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><pre><code class="css">h1&#123;    color:#232323;    background-color:#FFFFFF;    text-align:left;/*水平对齐*/    direction:rtl;/*与下一条配合改变文本方向*/    unicode-bidi:bidi-override;/**/    vertical-align:top;/*垂直对齐*/    text-decoration:overline;/*装饰，包含下划线、横穿线、上划线*/    text-transform:uppercase;/*指定大小写*/    text-indent:50px;/*首行缩进*/    letter-spacing: 3px;/*字母间距、可以为负值*/&#125;</code></pre><p>还可以指定行高、词间距、空白处理方式、文字阴影（阴影颜色、模糊）、字体、字体样式（斜体、加粗、变体（变体将小写字母转换为同样大小的大写字母））、字体大小、</p><h3 id="添加图标"><a href="#添加图标" class="headerlink" title="添加图标"></a>添加图标</h3><p>使用font awesome网站</p><pre><code class="html">&lt;head&gt;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css&quot;&gt;&lt;/head&gt;&lt;!--引入图标--&gt;&lt;i class=&quot;fa fa-cloud&quot;&gt;&lt;/i&gt;&lt;!--在对应的名称前添加fa即可--&gt;&lt;i class=&quot;fa fa-cloud fa-lg&quot;&gt;&lt;/i&gt;&lt;!--图标变大--&gt;</code></pre><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><pre><code class="css">/* 未被访问的链接 */a:link &#123;  color: red;&#125;/* 已被访问的链接 */a:visited &#123;  color: green;&#125;/* 将鼠标悬停在链接上 */a:hover &#123;  color: hotpink;&#125;/* 被选择的链接 */a:active &#123;  color: blue;&#125;</code></pre><p>可以用文本的装饰删除下划线、可以指定背景色</p><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>颜色、样式、迭代标记（数字、黑点还是字母）</p><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>边框、表格高度和宽度、水平对齐、垂直对齐、内边距、水平分割线、鼠标悬停效果、斑马纹效果、背景颜色、文本颜色、响应式表格（出现滚动条）</p><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://www.w3school.com.cn/css/index.asp">CSS 教程 (w3school.com.cn)</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> note </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> note </tag>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SQL初探</title>
       <link href="2021/08/22/SQL/"/>
       <url>2021/08/22/SQL/</url>
