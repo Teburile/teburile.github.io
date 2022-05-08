@@ -45,9 +45,7 @@
       
         <tags>
             
-            <tag> test </tag>
-            
-            <tag> video </tag>
+            <tag> 为霞 </tag>
             
         </tags>
       
@@ -206,25 +204,23 @@
     
     
     <entry>
-      <title>MarkDown博客的视频外链测试</title>
-      <link href="/2022/04/21/%E8%A7%86%E9%A2%91%E5%A4%96%E8%81%94%E6%B5%8B%E8%AF%95/"/>
-      <url>/2022/04/21/%E8%A7%86%E9%A2%91%E5%A4%96%E8%81%94%E6%B5%8B%E8%AF%95/</url>
+      <title>为霞智慧助老项目之滴滴打车</title>
+      <link href="/2022/05/04/%E4%B8%BA%E9%9C%9E%E6%BB%B4%E6%BB%B4%E6%89%93%E8%BD%A6/"/>
+      <url>/2022/05/04/%E4%B8%BA%E9%9C%9E%E6%BB%B4%E6%BB%B4%E6%89%93%E8%BD%A6/</url>
       
-        <content type="html"><![CDATA[<p>测试</p><span id="more"></span><center>测试视频</center><video src='https://cloud.tsinghua.edu.cn/f/7b89b52a26fb43b9b14b/?dl=1 ' type='video/mp4' controls='controls'  width='100%' height='100%'></video>]]></content>
+        <content type="html"><![CDATA[<p>滴滴打车</p><span id="more"></span><center>滴滴打车</center><video src='https://cloud.tsinghua.edu.cn/f/d8d5c86d1a964846b3b4/?dl=1' type='video/mp4' controls='controls'  width='100%' height='100%'></video>]]></content>
       
       
       <categories>
           
-          <category> Introduction </category>
+          <category> Volunteer </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> test </tag>
-            
-            <tag> video </tag>
+            <tag> 为霞 </tag>
             
         </tags>
       
@@ -233,9 +229,84 @@
     
     
     <entry>
-      <title>为霞智慧助老项目之北京健康宝使用</title>
-      <link href="/2022/04/21/%E4%B8%BA%E9%9C%9E%E6%A0%B8%E9%85%B8/"/>
-      <url>/2022/04/21/%E4%B8%BA%E9%9C%9E%E6%A0%B8%E9%85%B8/</url>
+      <title>为霞智慧助老项目之支付宝挂号</title>
+      <link href="/2022/05/04/%E4%B8%BA%E9%9C%9E%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8C%82%E5%8F%B7/"/>
+      <url>/2022/05/04/%E4%B8%BA%E9%9C%9E%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8C%82%E5%8F%B7/</url>
+      
+        <content type="html"><![CDATA[<p>支付宝挂号</p><span id="more"></span><center>支付宝挂号</center><video src='https://cloud.tsinghua.edu.cn/f/2c57ef3ae4ee4e389694/?dl=1' type='video/mp4' controls='controls'  width='100%' height='100%'></video>]]></content>
+      
+      
+      <categories>
+          
+          <category> Volunteer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 为霞 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>为霞智慧助老项目之美团买菜</title>
+      <link href="/2022/05/04/%E4%B8%BA%E9%9C%9E%E7%BE%8E%E5%9B%A2%E4%B9%B0%E8%8F%9C/"/>
+      <url>/2022/05/04/%E4%B8%BA%E9%9C%9E%E7%BE%8E%E5%9B%A2%E4%B9%B0%E8%8F%9C/</url>
+      
+        <content type="html"><![CDATA[<p>美团买菜</p><span id="more"></span><center>美团买菜</center><video src='https://cloud.tsinghua.edu.cn/f/dba72fa253444a10baf0/?dl=1' type='video/mp4' controls='controls'  width='100%' height='100%'></video>]]></content>
+      
+      
+      <categories>
+          
+          <category> Volunteer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 为霞 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>为霞智慧助老项目之高德地图导航</title>
+      <link href="/2022/05/04/%E4%B8%BA%E9%9C%9E%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E5%AF%BC%E8%88%AA/"/>
+      <url>/2022/05/04/%E4%B8%BA%E9%9C%9E%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E5%AF%BC%E8%88%AA/</url>
+      
+        <content type="html"><![CDATA[<p>高德地图导航</p><span id="more"></span><center>高德地图导航</center><video src='https://cloud.tsinghua.edu.cn/f/394225e66ad241cab8fa/?dl=1' type='video/mp4' controls='controls'  width='100%' height='100%'></video>]]></content>
+      
+      
+      <categories>
+          
+          <category> Volunteer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 为霞 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MarkDown博客的视频外链测试</title>
+      <link href="/2022/04/21/%E8%A7%86%E9%A2%91%E5%A4%96%E8%81%94%E6%B5%8B%E8%AF%95/"/>
+      <url>/2022/04/21/%E8%A7%86%E9%A2%91%E5%A4%96%E8%81%94%E6%B5%8B%E8%AF%95/</url>
       
         <content type="html"><![CDATA[<p>测试</p><span id="more"></span><center>测试视频</center><video src='https://cloud.tsinghua.edu.cn/f/7b89b52a26fb43b9b14b/?dl=1 ' type='video/mp4' controls='controls'  width='100%' height='100%'></video>]]></content>
       
